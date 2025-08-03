@@ -153,7 +153,7 @@ const Home: React.FC = () => {
 
         {currentTheme.layout.type === 'grid' ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {products.map((product, index) => (
+            {products.map((product) => (
               <motion.div
                 key={product.id}
                 className={`
@@ -218,7 +218,7 @@ const Home: React.FC = () => {
           </div>
         ) : (
           <div className={`${currentTheme.layout.spacing}`}>
-            {products.map((product, index) => (
+            {products.map((product) => (
               <motion.div
                 key={product.id}
                 className={`
