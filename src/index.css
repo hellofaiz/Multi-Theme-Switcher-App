@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+/* Custom CSS for better responsiveness and accessibility */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Line clamp utilities for text truncation */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Focus states for accessibility */
+*:focus {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+  .mobile-menu {
+    display: block;
+  }
+  
+  .desktop-menu {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-menu {
+    display: none;
+  }
+  
+  .desktop-menu {
+    display: block;
+  }
+}
+
+/* Animation classes */
+.scale-102 {
+  transform: scale(1.02);
+}
+
+.ease-bounce {
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
