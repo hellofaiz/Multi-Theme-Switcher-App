@@ -101,7 +101,7 @@ const About: React.FC = () => {
             : 'space-y-6'
           }
         `}>
-          {features.map((feature, index) => (
+          {features.map((feature) => (
             <motion.div
               key={feature.title}
               className={`
@@ -192,7 +192,7 @@ const About: React.FC = () => {
           {[
             'React 19', 'TypeScript', 'Tailwind CSS v4', 'Framer Motion', 
             'React Router', 'Context API', 'Vite', 'FakeStore API'
-          ].map((tech, index) => (
+          ].map((tech) => (
             <motion.span
               key={tech}
               className={`
@@ -206,7 +206,7 @@ const About: React.FC = () => {
               }}
               initial={{ scale: 0, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              transition={{ delay: index * 0.1 }}
+              transition={{ delay: Math.random() * 0.5 }}
               whileHover={{ scale: 1.1 }}
             >
               {tech}
